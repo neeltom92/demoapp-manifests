@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: demoapp
   annotations:
-    argocd-image-updater.argoproj.io/image-list: "api-image=385892239032.dkr.ecr.us-east-1.amazonaws.com/demoapp"
+    argocd-image-updater.argoproj.io/image-list: "api-image=891376983113.dkr.ecr.us-east-1.amazonaws.com/demoapp"
     argocd-image-updater.argoproj.io/api-image.update-strategy: latest
     argocd-image-updater.argoproj.io/api-image.kustomize.image-name: "application-image"
     argocd-image-updater.argoproj.io/api-image.force-update: "true"
@@ -13,5 +13,5 @@ spec:
     namespace: prod
   source:
     targetRevision: main
-    repoURL: git@github.com:kisialeus/demoapp-manifests.git
+    repoURL: git@github.com:neeltom92/demoapp-manifests.git 
     path: manifests/prod
